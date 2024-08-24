@@ -51,19 +51,17 @@ body{
 
 /* section 2 */
 .section-1{
-    margin-top: 32px;
-    width: 100vw;
-    height: 80vh;
     display: flex;
-    
-    
+    justify-content: space-between;  
+    margin-top: 32px;
 }
+
 .co{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    margin-left: 4%;
     box-shadow: inset 3px 5px 3px rgba(50 50 52 / 11%),  inset -3px -5px 3px rgb(50 50 52 / 11%);
 }
 .section-1 h1 {
@@ -93,140 +91,49 @@ body{
     
 }
 .section-1 img{
-    border-radius: 9px;
-   
-    box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-    height: 100%;
-     /* width: 85%; */
-    /* margin-left: 170px; it is good for 800 wala */
-
-    /* width: 50%; */
-    /* margin-left: 520px; */
-    width: 500px;
-    margin-left: 90%;
-  
+    /* width: 30%; */
+    width: 350px;
+    display: block;
+    /* height: 10%; */
+    height: 350px;
+    margin-right: 4%;
+    border-radius: 3px;
+    box-shadow: 3px 5px 3px rgba(50 50 52 / 11%),  -3px -5px 3px rgb(50 50 52 / 11%);
+    position: relative;
+    animation: example 2s ease 0s 2 normal ease-in;
 }
-
-@media(max-width:990px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 270px; 
+@keyframes example{
+    from {
+        right: 0px;
+    }
+    to{
+        right: 100px;
     }
 }
 
-@media(max-width:989px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 210px; 
-    }
-}
-@media(max-width:850px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 170px; 
-    }
-}
-
-@media(max-width:750px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 120px; 
-    }
-}
-
-@media(max-width:695px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 80px;
-    }
-}
 @media(max-width:660px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 30px; 
-    }
-}
-@media(max-width:590px){
     .section-1{
+        flex-wrap: wrap;
         justify-content: center;
-        padding: 15px;
+        margin-top: 16px;
     }
-    .co{
-        display: flex;
-        flex-direction: column;
+    .section-1 div{
         padding: 12px;
-       
     }
-    .co button{
-        margin-top: 8px;
-    }
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 85%;
-        margin-left: 80px; 
-    }
-}
-@media(max-width:565px){
-    .section-1 img{
-        border-radius: 9px;
-       
-        box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-        height: 100%;
-         width: 95%;
-        margin-left: 15px; 
-    }
-}
-@media(max-width:530px){
-    /* section 2 */
-.section-1{
-    /* border: 2px solid white;
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-     */
-     flex-wrap: wrap;
-    
-}
 
-.section-1 img{
-    border-radius: 9px;
-   
-    box-shadow: 3px 3px 8px rgba(59, 41, 18, 0.553);
-    height: 50%;
-     width: 60%;
-     display: block;
-    margin: auto; 
-   
-  
-}
-   
+    .section-1 img{
+        animation: example 2s ease 0s 2 normal ease-in;
+        margin-left: 4px;
+    }
+
+    @keyframes example{
+        from {
+          transform: translateY(-12px);
+        }
+        to{
+            transform: translateY(2px) scale(1)
+        }
+    }
 }
 /* coffe section */
 
@@ -235,8 +142,12 @@ body{
     text-decoration: underline;
    text-align: center;
    margin-top: 48px;
+   text-shadow: 4px 6px 12px rgb(118, 82, 82);
+   transition: all 2s ease-in;
 }
-
+.translateClass:hover{
+    transform: translateY(-6px) scale(1.5);
+    }
 .coffe-section {
   
     height: 100vh;
@@ -356,7 +267,45 @@ transition: all 1.5s ease;
     
 }
 
+@media(max-width:412px){
+    .coffee-intro{
+        margin-top: 400%;
+        /* flex-direction: column;
+         */
+         /* display: block; */
+        
+    }
 
+    .coffee-intro img{
+        display: none;
+     }
+
+     .coffee-intro img p{
+        /* margin: 0 auto; */
+        width: 100%;
+        /* text-align: center; */
+     }
+    
+}
+
+@media(max-width:344px){
+    .coffee-intro{
+        margin-top: 450%;
+        /* flex-direction: column;
+         */
+         /* display: block; */
+        
+    }
+
+    .coffee-intro img{
+        display: none;
+     }
+
+     .coffee-intro img p{
+      
+     }
+    
+}
 
 
 /* cold-coffee-section" */
@@ -366,7 +315,11 @@ transition: all 1.5s ease;
     text-decoration: underline;
     text-align: center;
     margin-top: 32px;
+    transition: all 1.7s ease;
 }
+.translateClass:hover{
+    transform: translateY(-6px) scale(1.5);
+    }
 
 .cold-section {
 
@@ -450,7 +403,11 @@ transform: translateY(-12px);
     text-decoration: underline;
     text-align: center;
     margin-top: 32px;
+    transition: all 1.4s ease;
 }
+.translateClass:hover{
+    transform: translateY(-6px) scale(1.5);
+    }
 .beans-section{
 
    
